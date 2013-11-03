@@ -13,6 +13,11 @@ namespace StateMachine.Library
     public interface IStateMachine<T>
     {
         /// <summary>
+        /// Returns the current state
+        /// </summary>
+        T CurrentState { get; }
+
+        /// <summary>
         /// Returns a setup class to allow transition rule definitions
         /// </summary>
         /// <returns>A IStateMachineSetup used to specify transition rules</returns>

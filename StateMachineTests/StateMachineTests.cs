@@ -10,7 +10,7 @@ namespace StateMachine.Library.Tests
         enum States { Locked, Unlocked, Opened }
 
         [TestMethod]
-        public void TestMethod1()
+        public void TestSetup()
         {
             IStateMachine<States> stateMachine = new StateMachine<States>(States.Locked);
             stateMachine.Setup()

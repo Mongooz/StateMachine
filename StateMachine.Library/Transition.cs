@@ -56,7 +56,10 @@ namespace StateMachine.Library
         /// </summary>
         public void Execute()
         {
-            onTransition();
+            if (onTransition != null)
+            {
+                onTransition();
+            }
         }
 
         /// <summary>
