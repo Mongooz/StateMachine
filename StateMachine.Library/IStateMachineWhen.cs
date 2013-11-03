@@ -10,7 +10,7 @@ namespace StateMachine.Library
     /// Allows valid state transitions to be specified
     /// </summary>
     /// <typeparam name="T">The type used to represent state</typeparam>
-    public interface IStateMachineWhen<T>
+    public interface IStateMachineWhen<T> : IStateMachineSetup<T>
     {
         /// <summary>
         /// Specify a valid transition state after the specified allowed state

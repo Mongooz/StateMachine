@@ -10,7 +10,7 @@ namespace StateMachine.Library
     /// Interface for functions to be performed on allowed state transitions
     /// </summary>
     /// <typeparam name="T">The type used to represent state</typeparam>
-    public interface IStateMachineAllow<T>
+    public interface IStateMachineAllow<T> : IStateMachineWhen<T>
     {
         /// <summary>
         /// Allows an operation to be called upon state transition
