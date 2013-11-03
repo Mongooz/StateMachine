@@ -68,6 +68,20 @@ namespace StateMachine.Library
             return false;
         }
 
+        /// <summary>
+        /// Determines whether the transition to the requested state is valid
+        /// </summary>
+        /// <param name="newState">The destination of the transition to check</param>
+        /// <returns>True if the transition is valid, otherwise false</returns>
+        public bool IsValidTransition(T newState)
+        {
+            if (GetTransitionTo(newState) != null)
+            {
+                return true;
+            }
+            return false;
+        }
+
         private Transition<T> GetTransitionTo(T newState)
         {
             return GetAvailableTransitions().SingleOrDefault(state => state.State.Equals(newState));
@@ -77,5 +91,7 @@ namespace StateMachine.Library
         {
             return Transitions.Where(transition => transition.TransitionState.Equals(CurrentState)).SelectMany(transition => transition.Transitions);
         }
+
+
     }
 }

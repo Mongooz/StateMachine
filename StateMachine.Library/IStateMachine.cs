@@ -24,5 +24,12 @@ namespace StateMachine.Library
         /// <param name="newState">The state to transition to</param>
         /// <returns>True if the transition is valid and was successful, otherwise false</returns>
         bool TryTransition(T newState);
+
+        /// <summary>
+        /// Determines whether the transition to the requested state is valid
+        /// </summary>
+        /// <param name="newState">The destination of the transition to check</param>
+        /// <returns>True if the transition is valid, otherwise false</returns>
+        bool IsValidTransition(T newState);
     }
 }
