@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateMachine.Library.Tests", "StateMachineTests\StateMachine.Library.Tests.csproj", "{20354B5D-6FAD-46DC-A18E-340DF2EE60F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StateMachine.Library", "StateMachine.Library\StateMachine.Library.csproj", "{65F8008B-25FB-4611-A5C3-C9A32A5D9B05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20354B5D-6FAD-46DC-A18E-340DF2EE60F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20354B5D-6FAD-46DC-A18E-340DF2EE60F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20354B5D-6FAD-46DC-A18E-340DF2EE60F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20354B5D-6FAD-46DC-A18E-340DF2EE60F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65F8008B-25FB-4611-A5C3-C9A32A5D9B05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65F8008B-25FB-4611-A5C3-C9A32A5D9B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65F8008B-25FB-4611-A5C3-C9A32A5D9B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65F8008B-25FB-4611-A5C3-C9A32A5D9B05}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
