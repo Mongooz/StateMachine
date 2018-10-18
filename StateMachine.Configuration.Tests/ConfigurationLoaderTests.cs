@@ -1,7 +1,5 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using StateMachine.Configuration.Model;
 
 namespace StateMachine.Configuration.Tests
 {

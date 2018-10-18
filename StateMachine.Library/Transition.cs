@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StateMachine.Library
+﻿namespace StateMachine.Library
 {
     /// <summary>
     /// The delegate for transition operations
@@ -56,10 +50,7 @@ namespace StateMachine.Library
         /// </summary>
         public void Execute()
         {
-            if (onTransition != null)
-            {
-                onTransition();
-            }
+            onTransition?.Invoke();
         }
 
         /// <summary>

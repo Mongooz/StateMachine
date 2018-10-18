@@ -1,10 +1,6 @@
 ﻿using StateMachine.Configuration.Model;
 using StateMachine.Library;
-using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Text;
 
 namespace StateMachine.Configuration
 {
