@@ -36,5 +36,7 @@ namespace StateMachine.Library
         /// <param name="newState">The destination of the transition to check</param>
         /// <returns>True if the transition is valid, otherwise false</returns>
         bool IsValidTransition(T newState);
+
+        IEnumerable<T> GetValidTransitions();
     }
 }

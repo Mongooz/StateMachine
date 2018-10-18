@@ -82,6 +82,11 @@ namespace StateMachine.Library
             return false;
         }
 
+        public IEnumerable<T> GetValidTransitions()
+        {
+            return Transitions.Where(transition => transition.TransitionState.Equals(CurrentState)).SelectMany(transition => transition.Transitions.Select(transitionTo => transitionTo.State));
+        }
+
         private Transition<T> GetTransitionTo(T newState)
         {
             return GetAvailableTransitions().SingleOrDefault(state => state.State.Equals(newState));
