@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StateMachine.Library
+﻿namespace StateMachine.Library
 {
     /// <summary>
     /// Allows chaining of state transition rules
