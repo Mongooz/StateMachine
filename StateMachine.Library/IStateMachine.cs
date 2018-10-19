@@ -1,4 +1,6 @@
-﻿namespace StateMachine.Library
+﻿using System.Collections.Generic;
+
+namespace StateMachine.Library
 {
     /// <summary>
     /// An interface for a StateMachine
@@ -31,6 +33,10 @@
         /// <returns>True if the transition is valid, otherwise false</returns>
         bool IsValidTransition(T newState);
 
+        /// <summary>
+        /// Returns the transitions that are valid from the currenst state
+        /// </summary>
+        /// <returns>Collection of valid transitions from the currenst state</returns>
         IEnumerable<T> GetValidTransitions();
     }
 }
