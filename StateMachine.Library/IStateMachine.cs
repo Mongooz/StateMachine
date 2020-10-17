@@ -37,6 +37,6 @@ namespace StateMachine.Library
         /// Returns the transitions that are valid from the currenst state
         /// </summary>
         /// <returns>Collection of valid transitions from the currenst state</returns>
-        IEnumerable<T> GetValidTransitions();
+        IEnumerable<AllowedState<T>> GetValidTransitions();
     }
 }

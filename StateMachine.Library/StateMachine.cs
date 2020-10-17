@@ -79,7 +79,7 @@ namespace StateMachine.Library
             return false;
         }
 
-        public IEnumerable<T> GetValidTransitions()
+        public IEnumerable<AllowedState<T>> GetValidTransitions()
         {
             return Transitions.Where(transition => transition.TransitionState.Equals(CurrentState)).SelectMany(transition => transition.Transitions.Select(transitionTo => transitionTo.State));
         }

@@ -1,4 +1,6 @@
-﻿namespace StateMachine.Library
+﻿using System;
+
+namespace StateMachine.Library
 {
     /// <summary>
     /// The delegate for transition operations
@@ -16,7 +18,7 @@
         /// <summary>
         /// The destination state of this transition
         /// </summary>
-        public T State { get; private set; }
+        public AllowedState<T> State { get; private set; }
 
         /// <summary>
         /// The logical parent of this transition rule, used internally for rule chaining
@@ -28,7 +30,7 @@
         /// </summary>
         /// <param name="parent">The State holding the initial state of this transition</param>
         /// <param name="state">The destination state of this transition</param>
-        public Transition(State<T> parent, T state)
+        public Transition(State<T> parent, AllowedState<T> state)
         {
             Parent = parent;
             State = state;
@@ -68,7 +70,7 @@
         /// </summary>
         /// <param name="transitionState">The state to allow to proceed the TransitionState</param>
         /// <returns>A IStateMachineAllow allowing transition operations to be specified</returns>
-        public IStateMachineAllow<T> Allow(T transitionState)
+        public IStateMachineAllow<T> Allow(AllowedState<T> transitionState)
         {
             return Parent.Allow(transitionState);
         }
@@ -81,6 +83,11 @@
         public IStateMachineWhen<T> When(T state)
         {
             return Parent.When(state);
+        }
+
+        internal Transition<T> To(T newState)
+        {
+            return new Transition<T>(Parent, newState);
         }
     }
 }

@@ -11,6 +11,6 @@
         /// </summary>
         /// <param name="transitionState">The allowed proceeding state</param>
         /// <returns>A IStateMachineAllow allowing transition operations to be specified</returns>
-        IStateMachineAllow<T> Allow(T transitionState);
+        IStateMachineAllow<T> Allow(AllowedState<T> transitionState);
     }
 }
