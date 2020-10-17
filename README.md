@@ -1,6 +1,8 @@
 StateMachine
 ============
 
+Library for handling state transitions for a finite state machine.
+
 An example of how you may use this library is to manage valid transitions between finite states represented by an enum. 
 
 I imagine the concept also lends itself to dynamic updates to transition rules.
