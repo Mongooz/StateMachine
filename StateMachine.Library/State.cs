@@ -40,7 +40,7 @@ namespace StateMachine.Library
         /// </summary>
         /// <param name="transitionState">The state to allow to proceed the TransitionState</param>
         /// <returns>A IStateMachineAllow allowing transition operations to be specified</returns>
-        public IStateMachineAllow<T> Allow(T transitionState)
+        public IStateMachineAllow<T> Allow(AllowedState<T> transitionState)
         {
             return Transitions.AddIfNotPresent(transition => transition.State, new Transition<T>(this, transitionState));
         }
