@@ -9,3 +9,4 @@ env:
 script:
   - dotnet restore
   - dotnet build
+  - dotnet test StateMachine.Library.Tests/StateMachine.Library.Tests.csproj
